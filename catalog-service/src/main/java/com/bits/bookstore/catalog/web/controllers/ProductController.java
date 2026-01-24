@@ -18,6 +18,7 @@ class ProductController {
 
     @GetMapping
     PageResult<ProductDto> getProductPage(@RequestParam(name = "page", defaultValue = "1") int pageNum) {
+        System.out.println("test");
         return productService.getProductPageByPageNumber(pageNum);
     }
 

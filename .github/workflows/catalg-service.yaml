@@ -15,11 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     env:
       working-directory: ./catalog-service
-      DOCKER_IMAGE_NAME: ${{ secrets.DOCKERHUB_USERNAME }}/bookstore-catalog-service
+      DOCKER_IMAGE_NAME: ${{ secrets.DOCKER_HUB_USER }}/bookstore-catalog-service
     defaults:
       run:
         working-directory: ${{ env.working-directory }}
-
     steps:
       - uses: actions/checkout@v5
 
