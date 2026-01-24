@@ -127,9 +127,7 @@
 					<image>
 						<name>${dockerImageName}</name>
 					</image>
-					<docker>
-						<host>npipe:////./pipe/docker_engine</host>
-					</docker>
+
 				</configuration>
 				<executions>
 					<execution>
