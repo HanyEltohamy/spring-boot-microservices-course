@@ -20,7 +20,7 @@ services:
         limits:
           memory: 700m
   order-service:
-    image: sivaprasadreddy/bookstore-order-service
+    image: hanyeltohamy/bookstore-order-service
     container_name: order-service
     environment:
       - SPRING_PROFILES_ACTIVE=docker

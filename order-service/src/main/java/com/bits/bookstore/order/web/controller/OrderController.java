@@ -46,7 +46,8 @@ class OrderController {
 
     @GetMapping(value = "/{orderNumber}")
     OrderDTO getOrder(@PathVariable String orderNumber) {
-        log.info("Fetching order by id: {}", orderNumber);
+
+        log.info("Get order by id: {}", orderNumber);
         String userName = securityService.getLoginUserName();
         return orderService
                 .findByUserNameAndOrderNum(userName, orderNumber)
