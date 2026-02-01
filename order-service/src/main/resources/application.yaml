@@ -1,0 +1,67 @@
+spring:
+  application:
+    name: order-service
+
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:25432/postgres}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}
+
+  jpa:
+    open-in-view: false
+    show-sql: true
+
+  rabbitmq:
+    host: ${RABBITMQ_HOST:localhost}
+    port: ${RABBITMQ_PORT:5672}
+    username: ${RABBITMQ_USERNAME:guest}
+    password: ${RABBITMQ_PASSWORD:guest}
+# RabitMq ques names
+orders:
+  publish-order-events-job-cron: "*/5 * * * * *"
+  new-orders-job-cron: "*/10 * * * * *"
+  catalog-service-url: http://localhost:8081
+  exchange: orders-exchange
+  new-queue: new-orders
+  delivered-queue: delivered-orders
+  cancelled-queue: cancelled-orders
+  error-queue: error-orders
+
+
+management:
+  info:
+    git:
+      mode: full
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  metrics:
+    tags:
+      application: ${spring.application.name}
+  tracing:
+    enabled: false
+    sampling:
+      probability: 1.0
+
+# Resilience4j Configuration
+resilience4j:
+  retry:
+    backends:
+      catalog-service:
+        max-attempts: 2
+        wait-duration: 1s
+
+  circuit-breaker:
+    backends:
+      catalog-service:
+        sliding-window-type: COUNT_BASED
+        sliding-window-size: 6
+        minimum-number-of-calls: 4
+        wait-duration-in-open-state: 20s
+        permitted-number-of-calls-in-half-open-state: 2
+        failure-rate-threshold: 50
+
+server:
+  port: 8082
+  shutdown: graceful

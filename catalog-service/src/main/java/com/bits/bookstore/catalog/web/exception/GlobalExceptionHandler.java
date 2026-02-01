@@ -1,4 +1,4 @@
-package com.bits.bookstore.catalog.web.controllers.exception;
+package com.bits.bookstore.catalog.web.exception;
 
 import com.bits.bookstore.catalog.domain.ProductNotFoundException;
 import java.net.URI;
