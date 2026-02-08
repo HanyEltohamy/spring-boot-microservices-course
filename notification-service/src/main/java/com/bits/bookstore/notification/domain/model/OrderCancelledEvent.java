@@ -1,7 +1,5 @@
 package com.bits.bookstore.notification.domain.model;
 
-
-
 import java.time.LocalDateTime;
 import java.util.Set;
 

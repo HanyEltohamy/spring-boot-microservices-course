@@ -1,6 +1,5 @@
 package com.bits.bookstore.notification.domain;
 
-
 import com.bits.bookstore.notification.config.ApplicationProperties;
 import com.bits.bookstore.notification.domain.model.OrderCancelledEvent;
 import com.bits.bookstore.notification.domain.model.OrderCreatedEvent;

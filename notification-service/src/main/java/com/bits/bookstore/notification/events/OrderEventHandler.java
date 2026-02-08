@@ -20,6 +20,7 @@ public class OrderEventHandler {
 
     private final NotificationService notificationService;
     private final OrderEventRepository orderEventRepository;
+
     public OrderEventHandler(NotificationService notificationService, OrderEventRepository orderEventRepository) {
         this.notificationService = notificationService;
         this.orderEventRepository = orderEventRepository;

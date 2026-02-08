@@ -1,6 +1,5 @@
 package com.bits.bookstore.notification.domain.model;
 
-
 import java.time.LocalDateTime;
 import java.util.Set;
 
@@ -10,5 +9,4 @@ public record OrderCreatedEvent(
         Set<OrderItem> items,
         Customer customer,
         Address deliveryAddress,
-        LocalDateTime createdAt) {
-}
+        LocalDateTime createdAt) {}
