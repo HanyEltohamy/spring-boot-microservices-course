@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="IU-253.30387.90">
-    <data-source name="postgres@localhost" uuid="baaf7f8c-0f71-44cf-ae03-33520d8f17e5">
+    <data-source name="postgres@localhost" uuid="e1b07dab-8f95-4f1e-b021-e08491349922">
       <database-info product="PostgreSQL" version="18.1" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.7.3" dbms="POSTGRES" exact-version="18.1" exact-driver-version="42.7">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
@@ -16,7 +16,22 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
-    <data-source name="postgres@localhost [2]" uuid="26236118-a035-4b10-a1e8-f2d117e55c24">
+    <data-source name="postgres@localhost [2]" uuid="60998737-0c2d-4096-9353-5d31ee9ee07b">
+      <database-info product="PostgreSQL" version="18.1" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.7.3" dbms="POSTGRES" exact-version="18.1" exact-driver-version="42.7">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="database" qname="@">
+            <node kind="schema" qname="@" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="postgres@localhost [3]" uuid="12ad1630-adb3-45ce-8426-b2faab5da3a2">
       <database-info product="PostgreSQL" version="18.1" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.7.3" dbms="POSTGRES" exact-version="18.1" exact-driver-version="42.7">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
