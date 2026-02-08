@@ -64,6 +64,8 @@ public class OrderEventHandler {
 
     @RabbitListener(queues = "${notifications.error-queue}")
     public void handle(OrderErrorEvent event) {
+        log.info("Received a OrderErrorEvent");
+
         if (orderEventRepository.existsByEventId(event.eventId())) {
             log.warn("Received duplicate OrderErrorEvent with eventId: {}", event.eventId());
             return;
